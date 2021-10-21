@@ -1,7 +1,7 @@
 "Use strict";
 const height = 10;const lenght = 23;const width = 13;
 square = `Высота параллелепипида ${height}, длина параллелепипида ${lenght}, 
-ширина параллелепипида ${width}. Площадь ${height*lenght*width} `;
+ширина параллелепипида ${width}. Объем ${height*lenght*width}, Площадь ${2*((width*lenght)+(width*height)+(height*lenght))} `;
 console.log(square);
 
 //1 способ//
