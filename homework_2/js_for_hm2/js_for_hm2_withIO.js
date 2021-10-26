@@ -36,17 +36,25 @@ if (numex === "2") {
     }
 } else if (numex === "4") {
     
-    let usernum = parseInt(prompt("Введите свое число"));
-    let prognum = Math.random()*(9-0)+0;
-    if (Math.floor(prognum) >  usernum) {
-    console.log("Загаданное число больше");
-    } else if ((Math.floor(prognum) <  usernum)) {
-    console.log("Загаданное число меньше");
-    } else if ((Math.floor(prognum) ===  usernum)) {
-    console.log("Вы угадали");
-    } else if (0 ===  usernum) {
-        console.log("Завершение программы");
+    let usernum = parseInt(prompt("Введите свое число или введите 0, чтобы выключить программу"));
+    let prognum = Math.floor(Math.random()*(9-1)+1);
+    while (usernum !== prognum || usernum === 0) {
+        if (usernum === 0) {
+            console.log("Завершение работы программы"); 
+            break;
+        }
+        if (prognum >  usernum) {
+        console.log("Загаданное число больше");
+        usernum = parseInt(prompt("Попробуйте еще раз"));
+            } else if (prognum <  usernum) {
+        console.log("Загаданное число меньше");
+        usernum = parseInt(prompt("Попробуйте еще раз"));
+            } else if (prognum === usernum) {
+        console.log(`Вы угадали, наше число было = ${prognum}`);
+        usernum = prognum;
+            } 
     }
+   
 } else if (numex === "6") {
 
     
